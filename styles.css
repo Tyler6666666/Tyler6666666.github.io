@@ -1,0 +1,371 @@
+:root {
+  --bg: #f4f1e8;
+  --paper: rgba(255, 252, 246, 0.92);
+  --ink: #1e2630;
+  --muted: #5f6a73;
+  --line: rgba(30, 38, 48, 0.12);
+  --accent: #b3472f;
+  --accent-2: #1f5f8b;
+  --shadow: 0 18px 50px rgba(21, 28, 36, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(179, 71, 47, 0.14), transparent 28%),
+    radial-gradient(circle at top right, rgba(31, 95, 139, 0.12), transparent 24%),
+    linear-gradient(180deg, #f7f2e7 0%, #ebe5d8 100%);
+}
+
+a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.page-shell {
+  width: min(1120px, calc(100vw - 32px));
+  margin: 24px auto 40px;
+}
+
+.hero,
+.panel {
+  background: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.hero {
+  padding: 28px 28px 34px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -80px -90px auto;
+  width: 240px;
+  height: 240px;
+  background: linear-gradient(135deg, rgba(179, 71, 47, 0.16), rgba(31, 95, 139, 0.08));
+  border-radius: 50%;
+  filter: blur(4px);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 42px;
+}
+
+.brand {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: white;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.topbar-links {
+  display: flex;
+  gap: 22px;
+  font-weight: 600;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.8fr);
+  gap: 24px;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow,
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Space Grotesk", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.7rem, 6vw, 4.8rem);
+  line-height: 0.95;
+  margin-bottom: 16px;
+}
+
+.hero-text,
+.section-body,
+.skill-card p,
+.timeline-item p,
+.project-card p,
+.project-card li,
+.language-list li {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.button-primary {
+  background: var(--ink);
+  color: white;
+}
+
+.button-secondary {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+}
+
+.hero-card {
+  padding: 22px 22px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(30, 38, 48, 0.08);
+}
+
+.hero-card h2 {
+  margin-bottom: 12px;
+  font-size: 1.28rem;
+}
+
+.contact-list,
+.language-list,
+.project-card ul,
+.tag-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-list li:last-child {
+  border-bottom: 0;
+}
+
+main {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.panel {
+  padding: 26px 28px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+}
+
+.section-heading h2 {
+  font-size: 1.7rem;
+}
+
+.timeline-item + .timeline-item {
+  margin-top: 18px;
+}
+
+.timeline-item h3,
+.skill-card h3,
+.project-card h3 {
+  font-size: 1.16rem;
+  margin-bottom: 6px;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-list li {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(31, 95, 139, 0.08);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.skill-card,
+.project-card {
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.skill-card {
+  padding: 18px 18px 14px;
+}
+
+.project-list {
+  display: grid;
+  gap: 14px;
+}
+
+.project-card {
+  padding: 18px 18px 16px;
+}
+
+.feature-project {
+  background: linear-gradient(180deg, rgba(31, 95, 139, 0.07), rgba(255, 255, 255, 0.82));
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: start;
+  margin-bottom: 10px;
+}
+
+.project-header > a,
+.project-links a {
+  font-weight: 700;
+}
+
+.project-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.project-card ul {
+  display: grid;
+  gap: 8px;
+}
+
+.project-card li {
+  position: relative;
+  padding-left: 18px;
+}
+
+.project-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.language-list {
+  display: grid;
+  gap: 10px;
+}
+
+@media (max-width: 920px) {
+  .hero-grid,
+  .two-column,
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .page-shell {
+    width: min(100vw - 18px, 1120px);
+    margin: 10px auto 24px;
+  }
+
+  .hero,
+  .panel {
+    border-radius: 22px;
+  }
+
+  .hero,
+  .panel {
+    padding: 20px 18px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  .topbar-links {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 2.55rem;
+  }
+
+  .project-header {
+    flex-direction: column;
+  }
+}
