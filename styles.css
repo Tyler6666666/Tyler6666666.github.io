@@ -1,14 +1,14 @@
 :root {
-  --bg: #060807;
-  --surface: #0e1412;
-  --surface-2: #141c19;
-  --text: #f2f6f0;
-  --muted: #9aa8a1;
-  --line: rgba(242, 246, 240, 0.14);
-  --green: #7cf6a3;
-  --cyan: #68d8ff;
-  --amber: #f6bd5f;
-  --red: #ff6f61;
+  --bg: #f6f8f5;
+  --surface: #ffffff;
+  --surface-2: #edf4ef;
+  --text: #10201b;
+  --muted: #60706a;
+  --line: rgba(16, 32, 27, 0.14);
+  --green: #0b7a4b;
+  --cyan: #0a6f8f;
+  --amber: #9a6416;
+  --red: #b54a3d;
   --max: 1180px;
 }
 
@@ -24,7 +24,7 @@ body {
   margin: 0;
   font-family: "Manrope", sans-serif;
   color: var(--text);
-  background: linear-gradient(180deg, #070a09 0%, #0a0f0d 44%, #070a09 100%);
+  background: linear-gradient(180deg, #fbfcf9 0%, #f3f7f2 45%, #eef3ef 100%);
 }
 
 body::before {
@@ -32,7 +32,7 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(180deg, rgba(7, 10, 9, 0) 0%, rgba(7, 10, 9, 0.42) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72) 0%, rgba(237, 244, 239, 0.5) 100%);
   z-index: -1;
 }
 
@@ -72,7 +72,7 @@ a:hover {
   border: 1px solid var(--line);
   border-radius: 8px;
   color: var(--text);
-  background: rgba(14, 20, 18, 0.78);
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .nav-links {
@@ -81,7 +81,7 @@ a:hover {
   padding: 12px 16px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(14, 20, 18, 0.78);
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .nav-links a,
@@ -188,14 +188,14 @@ h3 {
 }
 
 .button.primary {
-  color: #06100b;
+  color: #ffffff;
   background: var(--green);
 }
 
 .button.secondary {
   color: var(--text);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .telemetry-panel {
@@ -207,7 +207,7 @@ h3 {
   grid-template-columns: repeat(3, minmax(120px, 1fr));
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: rgba(14, 20, 18, 0.78);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(10px);
 }
 
@@ -278,7 +278,7 @@ h3 {
 .metric {
   min-height: 128px;
   padding: 22px;
-  background: rgba(14, 20, 18, 0.7);
+  background: rgba(255, 255, 255, 0.78);
   border-right: 1px solid var(--line);
 }
 
@@ -320,7 +320,7 @@ h3 {
 }
 
 .project.featured {
-  border-top-color: rgba(124, 246, 163, 0.45);
+  border-top-color: rgba(11, 122, 75, 0.35);
 }
 
 .project-index {
