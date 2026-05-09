@@ -142,7 +142,8 @@ def build_resume():
     )
     story.append(
         Paragraph(
-            f'<font color="{LINK_COLOR}"><a href="https://github.com/Tyler6666666">github.com/Tyler6666666</a></font>',
+            f'<font color="{LINK_COLOR}"><a href="https://github.com/Tyler6666666">github.com/Tyler6666666</a></font>'
+            f' | <font color="{LINK_COLOR}"><a href="https://tyler6666666.github.io">tyler6666666.github.io</a></font>',
             styles["contact"],
         )
     )
