@@ -15,7 +15,7 @@ function resize() {
 }
 
 function drawGrid() {
-  ctx.strokeStyle = "rgba(242, 246, 240, 0.06)";
+  ctx.strokeStyle = "rgba(242, 246, 240, 0.025)";
   ctx.lineWidth = 1;
   const step = 42;
 
@@ -54,7 +54,7 @@ function drawTrajectory(t) {
   ctx.lineWidth = 2;
   for (let i = 1; i < points.length; i += 1) {
     const alpha = 1 - i / points.length;
-    ctx.strokeStyle = `rgba(124, 246, 163, ${alpha * 0.45})`;
+    ctx.strokeStyle = `rgba(124, 246, 163, ${alpha * 0.28})`;
     ctx.beginPath();
     ctx.moveTo(points[i - 1].x, points[i - 1].y);
     ctx.lineTo(points[i].x, points[i].y);
@@ -67,7 +67,7 @@ function drawTrajectory(t) {
     y: marker.y + 70,
   };
 
-  ctx.strokeStyle = "rgba(104, 216, 255, 0.6)";
+  ctx.strokeStyle = "rgba(104, 216, 255, 0.38)";
   ctx.setLineDash([8, 8]);
   ctx.beginPath();
   ctx.moveTo(follower.x, follower.y);
