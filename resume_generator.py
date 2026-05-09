@@ -133,7 +133,7 @@ def build_resume():
 
     story = []
 
-    story.append(Paragraph("Tyler Zeng", styles["name"]))
+    story.append(Paragraph("Tianren (Tyler) Zeng", styles["name"]))
     story.append(
         Paragraph(
             "Berkeley, CA | 949-678-3619 | tianren_zeng@berkeley.edu",
