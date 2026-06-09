@@ -299,6 +299,49 @@ h3 {
   line-height: 1.45;
 }
 
+.paper-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: end;
+  padding: 28px;
+  border: 1px solid rgba(11, 122, 75, 0.22);
+  border-radius: 10px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(237, 244, 239, 0.88)),
+    var(--surface);
+}
+
+.paper-card h2 {
+  margin: 8px 0 14px;
+  font-size: clamp(2rem, 4.4vw, 4.8rem);
+}
+
+.paper-card p {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.06rem;
+  line-height: 1.7;
+}
+
+.paper-card a {
+  flex: 0 0 auto;
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.92rem;
+  background: rgba(255, 255, 255, 0.76);
+}
+
+.paper-meta {
+  font-family: "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  color: var(--green) !important;
+  font-size: 0.82rem !important;
+  line-height: 1.4 !important;
+}
+
 .section-heading {
   display: flex;
   justify-content: space-between;
@@ -466,6 +509,7 @@ h3 {
   .stack-grid,
   .course-grid,
   .contact-band,
+  .paper-card,
   .section-heading {
     grid-template-columns: 1fr;
     display: grid;

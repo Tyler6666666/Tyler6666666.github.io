@@ -206,6 +206,22 @@ def build_resume():
         )
     )
 
+    add_section(story, styles, "Research / Publication")
+    story.append(
+        Paragraph(
+            f'Agents&apos; Last Exam | arXiv:2606.05405 | Co-author | 2026 | '
+            f'<font color="{LINK_COLOR}"><a href="https://arxiv.org/abs/2606.05405">arXiv</a></font>',
+            styles["entry_title"],
+        )
+    )
+    add_bullets(
+        story,
+        styles,
+        [
+            "Co-authored a benchmark paper evaluating AI agents on long-horizon, economically valuable professional workflows with verifiable outcomes.",
+        ],
+    )
+
     add_section(story, styles, "Project Experience")
     story.append(
         Paragraph(
@@ -262,8 +278,7 @@ def build_resume():
     add_section(story, styles, "Languages")
     story.append(
         Paragraph(
-            "English: sufficient for academic and work settings<br/>"
-            "Chinese: native speaker",
+            "English: sufficient for academic and work settings | Chinese: native speaker",
             styles["body"],
         )
     )
